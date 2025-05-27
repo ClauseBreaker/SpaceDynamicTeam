@@ -1,21 +1,34 @@
-/* ========== Hero Section (Fidan) ========== */
+/* ========== HEADER (mr-rt95) ========== */
+
+/* Styles for small screens (mobile): 0–767px */
+@media (max-width: 767px) {}
+
+/* Styles for medium screens (tablet): 768px–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+
+    /* Styles for large screens (desktop): 1024px and up */
+    @media (min-width: 1024px) {}
+
+
+    /* ========== Hero Section (Fidan) ========== */
 
 
 
 
 
 
-/* ========== Services Section (Inci) ========== */
+    /* ========== Services Section (Inci) ========== */
 
 
 
 
 
 
-/* ========== Blog Section (Laman)========== */
+    /* ========== Blog Section (Laman)========== */
 
 
 
 
 
-/* ========== Portfolio Section (Irana)========== */
+    /* ========== Portfolio Section (Irana)========== */
