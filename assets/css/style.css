@@ -4,31 +4,31 @@
 @media (max-width: 767px) {}
 
 /* Styles for medium screens (tablet): 768px–1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {}
 
 
-    /* Styles for large screens (desktop): 1024px and up */
-    @media (min-width: 1024px) {}
+/* Styles for large screens (desktop): 1024px and up */
+@media (min-width: 1024px) {}
 
 
-    /* ========== Hero Section (Fidan) ========== */
-
-
-
-
-
-
-    /* ========== Services Section (Inci) ========== */
+/* ========== Hero Section (Fidan) ========== */
 
 
 
 
 
 
-    /* ========== Blog Section (Laman)========== */
+/* ========== Services Section (Inci) ========== */
 
 
 
 
 
-    /* ========== Portfolio Section (Irana)========== */
+
+/* ========== Blog Section (Laman)========== */
+
+
+
+
+
+/* ========== Portfolio Section (Irana)========== */
