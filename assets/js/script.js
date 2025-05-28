@@ -1,8 +1,12 @@
 
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerButton = document.querySelector('.site-header__burger');
+    const mobileMenu = document.querySelector('.site-header__mobile-nav');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
+    burgerButton.addEventListener('click', function () {
+        burgerButton.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
 });
+
+
