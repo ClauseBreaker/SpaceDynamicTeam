@@ -12,10 +12,18 @@
 
 
 /* ========== Hero Section (Fidan) ========== */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.string{
+    display: flex;
+    
+    flex-direction: column;
 
-
-
-
+}
 
 
 /* ========== Services Section (Inci) ========== */
