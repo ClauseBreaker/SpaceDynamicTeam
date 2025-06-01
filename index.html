@@ -33,10 +33,12 @@
     <link rel="shortcut icon" href="./assets/images/logo/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="./assets/images/logo/apple-touch-icon.png">
 
-    <!--  Fonts: Orbitron from Google Fonts -->
+    <!--  Fonts: Poppins from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <!--  Stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css">
@@ -46,7 +48,72 @@
 <body>
     <!-- ==================== Site Header ==================== -->
     <header class="site-header">
+        <div class="site-header__container">
+            <h4 class="site-header__logo">SPAC<span>DYNA</span></h4>
+            <!-- /.site-header__logo -->
 
+            <nav class="site-header__nav">
+                <ul class="site-header__list">
+                    <li class="site-header__item">
+                        <a href="#hero" class="site-header__link">Home</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#about" class="site-header__link">About Us</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#services" class="site-header__link">Services</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#portfolio" class="site-header__link">Portfolio</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#blog" class="site-header__link">Blog</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#contact" class="site-header__link">Message Us</a>
+                    </li>
+                </ul>
+                <button class="site-header__cta">
+                    <a href="#contact">Contact now</a>
+                </button>
+            </nav>
+            <!-- /.site-header__nav -->
+
+            <!-- Burger menu -->
+            <button class="site-header__burger" aria-label="Open menu">
+                <span class="site-header__burger-line"></span>
+                <span class="site-header__burger-line"></span>
+                <span class="site-header__burger-line"></span>
+            </button>
+        </div>
+        <!-- /.site-header__container -->
+
+        <!-- Mobile navigation menu -->
+        <div class="site-header__mobile-container">
+            <nav class="site-header__mobile-nav">
+                <ul class="site-header__mobile-list">
+                    <li class="site-header__mobile-item">
+                        <a href="#hero" class="site-header__mobile-link">Home</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#about" class="site-header__mobile-link">About Us</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#services" class="site-header__mobile-link">Services</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#portfolio" class="site-header__mobile-link">Portfolio</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#blog" class="site-header__mobile-link">Blog</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#contact" class="site-header__mobile-link">Message Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /.site-header__mobile-container -->
     </header>
 
 

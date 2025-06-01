@@ -1,8 +1,7 @@
-
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
+const burger = document.querySelector('.site-header__burger');
+const mobileMenu = document.querySelector('.site-header__mobile-container');
 
 burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
 });

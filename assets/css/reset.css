@@ -15,7 +15,6 @@
 /* 2. Set default styles for html and body */
 html,
 body {
-    height: 100%;
     width: 100%;
     font-size: 100%;
     line-height: 1.5;
