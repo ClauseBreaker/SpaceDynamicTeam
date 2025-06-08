@@ -1,20 +1,69 @@
+/* ==================== Base Styles ==================== */
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     font-family: Poppins, sans-serif;
 }
 
-/* ========== HEADER (mr-rt95) ========== */
+
+/* ==================== Header (mr-rt95) ==================== */
 header {
-    height: 104px;
-    position: sticky;
+    position: relative;
     top: 0;
+    height: 104px;
     background-color: #ffffff;
+    z-index: 10;
+    transition: all 0.3s ease;
 }
 
-/* logo */
+.site-header__container {
+    height: 104px;
+}
+
+.site-header.sticky {
+    position: sticky;
+    height: 90px;
+    top: 0;
+    z-index: 999;
+    animation: fadeSlideDown 0.4s ease;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 6px 12px rgba(0, 0, 0, 0.12),
+        0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.site-header.sticky .site-header__container {
+    height: 90px;
+    padding: 0 20px;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.site-header__link.active,
+.site-header__mobile-link.active {
+    color: #fe3f40;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+
+/* ==================== Logo ==================== */
 .site-header__logo {
-    font-size: 24px;
     font-family: "Poppins", sans-serif;
+    font-size: 24px;
     color: #03a4ed;
 }
 
@@ -22,28 +71,95 @@ header {
     color: #fe3f40;
 }
 
-/* Styles for small screens (mobile): 0–767px */
+
+/* ==================== Navigation ==================== */
+.site-header__nav {
+    display: flex;
+}
+
+.site-header__list {
+    display: flex;
+}
+
+.site-header__item {
+    margin: 0 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.site-header__item:hover {
+    color: #fe3f40;
+    transition: all 0.3s ease;
+}
+
+
+/* ==================== Burger Menu ==================== */
+.site-header__burger {
+    display: none;
+}
+
+
+/* ==================== Responsive: Mobile (0–767px) ==================== */
 @media (max-width: 767px) {
+    .site-header__cta {
+        display: none;
+    }
 
     .site-header__nav {
         display: none;
     }
 
+    .site-header__mobile-container {
+        width: 100%;
+        max-height: 0;
+        padding-inline: 15px;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .site-header__mobile-container.open {
+        max-height: 500px;
+    }
+
     .site-header__mobile-nav {
-        text-align: center;
-        margin-inline: 15px;
+        margin: auto;
         max-width: 540px;
+        text-align: center;
         background-color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .site-header__mobile-nav>ul {
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .site-header__mobile-nav>ul>li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        cursor: pointer;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .site-header__mobile-nav>ul>li.active {
+        color: #fe3f40;
+    }
+
+    .site-header__mobile-nav>ul>li:hover {
+        color: #fe3f40;
+        background-color: #eeeeee;
+        transition: all 0.3s ease;
     }
 
     .site-header__container {
         display: flex;
-        padding: 34px;
         justify-content: space-between;
         align-items: center;
+        padding: 30px;
     }
 
-    /* Burger menu */
     .site-header__burger {
         display: flex;
         flex-direction: column;
@@ -54,10 +170,10 @@ header {
     }
 
     .site-header__burger-line {
-        transition: all 0.3s ease;
-        transform-origin: center;
-        background-color: #000000;
         height: 2px;
+        background-color: #000000;
+        transform-origin: center;
+        transition: all 0.3s ease;
     }
 
     .site-header__burger-line:nth-child(1) {
@@ -72,7 +188,6 @@ header {
         width: 22.5px;
     }
 
-
     .site-header__burger.open .site-header__burger-line:nth-child(1) {
         transform: rotate(45deg) translate(8px, 6px);
         width: 30px;
@@ -86,102 +201,112 @@ header {
         transform: rotate(-45deg) translate(6px, -5px);
         width: 30px;
     }
+}
 
-    .site-header__mobile-container {
-        width: 100%;
-        padding-inline: 15px;
-    }
 
-    .site-header__mobile-container.open {
-        display: block;
-        transition: all 0.6s ease;
-    }
-
+/* ==================== Responsive: Tablet (768px–1023px) ==================== */
+@media (min-width: 768px) and (max-width: 1023px) {
     .site-header__mobile-container {
         display: none;
-        width: 100%;
-        padding-inline: 15px;
     }
 
-    .site-header__mobile-nav {
-        margin: auto;
+    .site-header__cta {
+        display: none;
     }
 
-    .site-header__mobile-nav>ul {
-        border-top: 1px solid #e7e7e7;
-        border-bottom: 1px solid #e7e7e7;
-    }
-
-    .site-header__mobile-nav>ul>li {
+    .site-header__container {
         display: flex;
+        justify-content: space-around;
         align-items: center;
-        justify-content: center;
-        height: 50px;
-        border-top: 1px solid #e7e7e7;
-        border-bottom: 1px solid #e7e7e7;
-        cursor: pointer;
-    }
-
-    .site-header__mobile-nav>ul>li:hover {
-        color: #fe3f40;
-        transition: all 0.3s ease;
-        background-color: #eeeeee;
+        height: 100%;
     }
 }
 
-/* Styles for medium screens (tablet): 768px–1023px */
-@media (min-width: 768px) and (max-width: 1023px) {}
+
+/* ==================== Responsive: Laptop (1024px and up) ==================== */
+@media (min-width: 1024px) {
+    .site-header__mobile-container {
+        display: none;
+    }
+
+    .site-header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-header__cta {
+        margin: 0 20px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        background-color: #fe3f40;
+        padding: 8px 22px;
+        border-radius: 23px;
+    }
+
+    .site-header__cta:hover {
+        background-color: #0d6efd;
+        transition: all 0.3s ease;
+    }
+
+    .site-header__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+}
 
 
-/* Styles for large screens (desktop): 1024px and up */
-@media (min-width: 1024px) {}
-
+/* ==================== Sections ==================== */
 
 /* ========== Hero Section (Fidan) ========== */
 .hero-section {
     width: 100%;
-    height: 900px;
-    background-color: #fe3f40;
+    background-color: #ffffff;
 }
 
-
-/* ========== About Section (Inci) ========== */
-
+/* ========== About Section ========== */
 .about-section {
     width: 100%;
-    height: 900px;
-    background-color: #4cfe3f;
+    background-color: #ffffff;
 }
-
-
-
 
 /* ========== Services Section (Inci) ========== */
-
 .services-section {
     width: 100%;
-    height: 900px;
-    background-color: #fe3f40;
+    background-color: #ffffff;
 }
 
-
-
-
-/* ========== Blog Section (Laman)========== */
-
-.blog-section {
-    width: 100%;
-    height: 900px;
-    background-color: #7b00ff;
-}
-
-
-
-
-/* ========== Portfolio Section (Irana)========== */
-
+/* ========== Portfolio Section (Irana) ========== */
 .portfolio-section {
     width: 100%;
-    height: 900px;
-    background-color: #140dec;
+    background-color: #ffffff;
+}
+
+/* ========== Blog Section (Laman) ========== */
+.blog-section {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* ========== Contact Section (Huseyn) ========== */
+.contact-section {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+
+/* ==================== Footer ==================== */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 135px;
+    color: #2a2a2a;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
 }
