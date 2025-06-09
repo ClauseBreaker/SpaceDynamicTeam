@@ -4,9 +4,6 @@ const mobileMenu = document.querySelector('.site-header__mobile-container');
 burger.addEventListener('click', () => {
     burger.classList.toggle('open');
     mobileMenu.classList.toggle('open');
-<<<<<<< HEAD
-});
-=======
 });
 const header = document.querySelector('.site-header');
 const aboutSection = document.getElementById('about');
@@ -44,4 +41,3 @@ function updateActiveLink() {
 }
 
 window.addEventListener('scroll', updateActiveLink);
->>>>>>> 2900addea6282c42a92fb4d9f31a16f061a50505
