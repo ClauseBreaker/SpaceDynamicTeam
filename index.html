@@ -33,10 +33,12 @@
     <link rel="shortcut icon" href="./assets/images/logo/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="./assets/images/logo/apple-touch-icon.png">
 
-    <!--  Fonts: Orbitron from Google Fonts -->
+    <!--  Fonts: Poppins from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <!--  Stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css">
@@ -46,30 +48,90 @@
 <body>
     <!-- ==================== Site Header ==================== -->
     <header class="site-header">
-        <div class="container header-container">
+        <div class="site-header__container">
+            <h4 class="site-header__logo">SPAC<span>DYNA</span></h4>
+            <!-- /.site-header__logo -->
 
+            <nav class="site-header__nav">
+                <ul class="site-header__list">
+                    <li class="site-header__item">
+                        <a href="#hero" class="site-header__link">Home</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#about" class="site-header__link">About Us</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#services" class="site-header__link">Services</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#portfolio" class="site-header__link">Portfolio</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#blog" class="site-header__link">Blog</a>
+                    </li>
+                    <li class="site-header__item">
+                        <a href="#contact" class="site-header__link">Message Us</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="site-header__cta">Contact Now</a>
+            </nav>
+            <!-- /.site-header__nav -->
+
+            <!-- Burger menu -->
+            <button class="site-header__burger" aria-label="Open menu">
+                <span class="site-header__burger-line"></span>
+                <span class="site-header__burger-line"></span>
+                <span class="site-header__burger-line"></span>
+            </button>
         </div>
+        <!-- /.site-header__container -->
+
+        <!-- Mobile navigation menu -->
+        <div class="site-header__mobile-container">
+            <nav class="site-header__mobile-nav">
+                <ul class="site-header__mobile-list">
+                    <li class="site-header__mobile-item">
+                        <a href="#hero" class="site-header__mobile-link">Home</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#about" class="site-header__mobile-link">About Us</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#services" class="site-header__mobile-link">Services</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#portfolio" class="site-header__mobile-link">Portfolio</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#blog" class="site-header__mobile-link">Blog</a>
+                    </li>
+                    <li class="site-header__mobile-item">
+                        <a href="#contact" class="site-header__mobile-link">Message Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /.site-header__mobile-container -->
     </header>
+
+
     <!-- ==================== Main Content ==================== -->
     <main class="site-main">
 
         <!-- ========== Hero Section (Fidan) ========== -->
         <section id="hero" class="hero-section">
-            <div class="container hero-container">
-
-            </div>
+            <img src="./assets/images/section/hero-section.png" alt="">
         </section>
         <!-- ========== About Section ========== -->
         <section id="about" class="about-section">
-            <div class="container about-container">
-
-            </div>
+            <img src="./assets/images/section/about-section.png" alt="">
         </section>
         <!-- ========== Services Section (Inci) ========== -->
         <section id="services" class="services-section">
-            <div class="container services-container">
-
-            </div>
+            <img src="./assets/images/section/hero-section.png" alt="">
+        </section> <!-- ========== Portfolio Section (Irana)========== -->
+        <section id="portfolio" class="portfolio-section">
+            <img src="./assets/images/section/portfolio-section.png" alt="">
         </section>
         <!-- ========== Blog Section (Laman)========== -->
         <section id="blog" class="blog-section">
@@ -108,7 +170,7 @@
                         <p>18 Mar 2021</p>
                         </div>
                         <h4>New Websites & Blacklins</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque.</p></div>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque.</span></div>
                         <img src="./assets/images/photos/blog-thumb-01.jpg"  class="sctn-img">
                     </div>
                     <div class="rght-lst-sctn">
@@ -116,40 +178,34 @@
                         <p>14 Mar 2021</p>
                     </div>
                         <h4>SEO Analysis & Content ideas</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque.</p></div>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque.</span></div>
                         <img src="./assets/images/photos/blog-thumb-01.jpg"  class="sctn-img">
                     </div> 
                     <div class="rght-lst-sctn">
-                        <div class="rght-lst-sctn-txt"><div class="bgnng">
+                        <div class="rght-lst-sctn-txt">
+                        <div class="bgnng">
                         <img src="./assets/images/logo/calendar.png">
                         <p>06 Mar 2021</p>
                         </div>
                         <h4>SEO Tips & Digital Marketing</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque.</p></div>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque.</span></div>
                         <img src="./assets/images/photos/blog-thumb-01.jpg"  class="sctn-img">
                     </div>
             </div>
         </section>
-        <!-- ========== Portfolio Section (Irana)========== -->
-        <section id="portfolio" class="portfolio-section">
-            <div class="container projects-container">
 
-            </div>
-        </section>
         <!-- ========== Contact Section ========== -->
         <section id="contact" class="contact-section">
-            <div class="container contact-container">
-            </div>
+            <img src="./assets/images/section/contacnt-section.png" alt="">
         </section>
 
     </main>
 
     <!-- ==================== Site Footer ==================== -->
     <footer class="site-footer">
-        <div class="container footer-container">
-
-        </div>
+        <p>© Copyright 2021 Space Dynamic Co. All Rights Reserved.</p>
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

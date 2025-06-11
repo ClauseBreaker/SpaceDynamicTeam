@@ -1,22 +1,296 @@
+/* ==================== Base Styles ==================== */
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: Poppins, sans-serif;
+}
+
+
+/* ==================== Header (mr-rt95) ==================== */
+header {
+    position: relative;
+    top: 0;
+    height: 104px;
+    background-color: #ffffff;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.site-header__container {
+    height: 104px;
+}
+
+.site-header.sticky {
+    position: sticky;
+    height: 90px;
+    top: 0;
+    z-index: 999;
+    animation: fadeSlideDown 0.4s ease;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 6px 12px rgba(0, 0, 0, 0.12),
+        0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.site-header.sticky .site-header__container {
+    height: 90px;
+    padding: 0 20px;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.site-header__link.active,
+.site-header__mobile-link.active {
+    color: #fe3f40;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+
+/* ==================== Logo ==================== */
+.site-header__logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: #03a4ed;
+}
+
+.site-header__logo span {
+    color: #fe3f40;
+}
+
+
+/* ==================== Navigation ==================== */
+.site-header__nav {
+    display: flex;
+}
+
+.site-header__list {
+    display: flex;
+}
+
+.site-header__item {
+    margin: 0 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.site-header__item:hover {
+    color: #fe3f40;
+    transition: all 0.3s ease;
+}
+
+
+/* ==================== Burger Menu ==================== */
+.site-header__burger {
+    display: none;
+}
+
+
+/* ==================== Responsive: Mobile (0–767px) ==================== */
+@media (max-width: 767px) {
+    .site-header__cta {
+        display: none;
+    }
+
+    .site-header__nav {
+        display: none;
+    }
+
+    .site-header__mobile-container {
+        width: 100%;
+        max-height: 0;
+        padding-inline: 15px;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .site-header__mobile-container.open {
+        max-height: 500px;
+    }
+
+    .site-header__mobile-nav {
+        margin: auto;
+        max-width: 540px;
+        text-align: center;
+        background-color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .site-header__mobile-nav>ul {
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .site-header__mobile-nav>ul>li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        cursor: pointer;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .site-header__mobile-nav>ul>li.active {
+        color: #fe3f40;
+    }
+
+    .site-header__mobile-nav>ul>li:hover {
+        color: #fe3f40;
+        background-color: #eeeeee;
+        transition: all 0.3s ease;
+    }
+
+    .site-header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .site-header__burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .site-header__burger-line {
+        height: 2px;
+        background-color: #000000;
+        transform-origin: center;
+        transition: all 0.3s ease;
+    }
+
+    .site-header__burger-line:nth-child(1) {
+        width: 22.5px;
+    }
+
+    .site-header__burger-line:nth-child(2) {
+        width: 30px;
+    }
+
+    .site-header__burger-line:nth-child(3) {
+        width: 22.5px;
+    }
+
+    .site-header__burger.open .site-header__burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 6px);
+        width: 30px;
+    }
+
+    .site-header__burger.open .site-header__burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .site-header__burger.open .site-header__burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -5px);
+        width: 30px;
+    }
+}
+
+
+/* ==================== Responsive: Tablet (768px–1023px) ==================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .site-header__mobile-container {
+        display: none;
+    }
+
+    .site-header__cta {
+        display: none;
+    }
+
+    .site-header__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+
+/* ==================== Responsive: Laptop (1024px and up) ==================== */
+@media (min-width: 1024px) {
+    .site-header__mobile-container {
+        display: none;
+    }
+
+    .site-header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-header__cta {
+        margin: 0 20px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        background-color: #fe3f40;
+        padding: 8px 22px;
+        border-radius: 23px;
+    }
+
+    .site-header__cta:hover {
+        background-color: #0d6efd;
+        transition: all 0.3s ease;
+    }
+
+    .site-header__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+
+/* ==================== Sections ==================== */
+
 /* ========== Hero Section (Fidan) ========== */
+.hero-section {
+    width: 100%;
+    background-color: #ffffff;
+}
 
-
-
-
-
+/* ========== About Section ========== */
+.about-section {
+    width: 100%;
+    background-color: #ffffff;
+}
 
 /* ========== Services Section (Inci) ========== */
+.services-section {
+    width: 100%;
+    background-color: #ffffff;
+}
 
-
-
-
-
+/* ========== Portfolio Section (Irana) ========== */
+.portfolio-section {
+    width: 100%;
+    background-color: #ffffff;
+}
 
 /* ========== Blog Section (Laman)========== */
+
 .container-blog-container{
     display:flex;
     position: relative;
-    gap:40px;
+    justify-content:space-evenly;
 }
 .blg-sctn-hdng h2{
     line-height: 44px;
@@ -80,7 +354,7 @@
     margin-bottom: 30px;
 }
 .right-lst-img{
-    margin-left: 555px;
+    margin-left: 380px;
     width: 270px;
     height: 277px;   
 }
@@ -92,6 +366,7 @@
 .rght-lst-sctn-txt{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .rght-lst-sctn .sctn-img{
     width:250px;
@@ -99,12 +374,45 @@
     border-radius: 20px;
   
 }
+.rght-lst-sctn span{
+    font-size: 15px;
+    width:350px;
+    height: 60px;
+}
+.bgnng {
+    gap:10px;
+}
 .bgnng img{
     width: 15px;
     height:16px;
 }
+.rght-lst-sctn h4{
+    font-size: 20px;
+}
+@media (max-width: 767px) {
+.container-blog-container{
+    display: flex;
+    flex-direction: column;
+}
+}
 
 
+/* ========== Contact Section (Huseyn) ========== */
+.contact-section {
+    width: 100%;
+    background-color: #ffffff;
+}
 
 
-/* ========== Portfolio Section (Irana)========== */
+/* ==================== Footer ==================== */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 135px;
+    color: #2a2a2a;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
